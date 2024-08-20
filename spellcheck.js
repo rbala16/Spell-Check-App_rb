@@ -3,7 +3,7 @@ const request = require('postman-request');
 const apiKey = '5e2Z44eUM3AXtnCtPtqwgypHLSSsZTLV'; 
 
 const makeSpellCheckRequest = (text, callback) => {
-  const url = `https://api.apilayer.com/spell/spellchecker?q=${text}`;
+  const url = `https://api.apilayer.com/spell/spellchecker?q=${encodeURIComponent(text)}`;
   const options = {
     url,
     headers: {
