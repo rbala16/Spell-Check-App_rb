@@ -1,4 +1,3 @@
-
 console.log("Client side javascript file is loaded!");
 
 const spellCheckForm = document.querySelector("#spellcheck-form");
@@ -16,10 +15,12 @@ spellCheckForm.addEventListener("submit", (e) =>{
 
     fetch('/spellcheck?text=' + textInputValue)
     .then((response) => {
-        response.json().then((data) => {
+        response.json()
+    .then((data) => {
           if (data.error) {
             outputOne.textContent = data.error;
-          } else {
+          } 
+          else {
             outputOne.textContent = data.correctedText;
             outputTwo.textContent = "Thank you for visiting!";
           }
