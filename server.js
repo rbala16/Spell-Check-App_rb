@@ -5,9 +5,9 @@ const spellcheck = require('./spellcheck'); // Import the function
 
 const app = express();
 const port = process.env.port || 8080;
-
+app.use(express.json());
 // Define paths for Express config
-const publicDirectoryPath = path.join(__dirname, "../public");
+const publicDirectoryPath = path.join(__dirname, "public");
 
 // Setup static directory to serve
 app.use(express.static(publicDirectoryPath));
