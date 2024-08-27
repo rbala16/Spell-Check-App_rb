@@ -13,7 +13,7 @@ const publicDirectoryPath = path.join(__dirname, "public");
 app.use(express.json());
 app.use(express.static(publicDirectoryPath));
 
-//define midpoint to process get request send by user
+//define API endpoint to process get request send by user
 app.get("/spellcheck",(req,res)=>{
 const text = req.query.text;
 
